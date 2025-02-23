@@ -29,9 +29,7 @@ class ReviewsList extends StatelessWidget {
                         : const Text('Some Thing Went Worng'));
           },
           separatorBuilder: (BuildContext context, int index) {
-            return const SizedBox(
-              height: 20,
-            );
+            return const SizedBox();
           },
         );
       },

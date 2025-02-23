@@ -14,7 +14,7 @@ class ReviewListContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 150,
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
