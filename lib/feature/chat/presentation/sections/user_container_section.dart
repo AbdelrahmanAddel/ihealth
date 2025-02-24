@@ -15,24 +15,35 @@ class UserContainerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 233,
-      height: 120,
-      decoration: BoxDecoration(
-        color: AppColors.greenButton,
-        borderRadius: BorderRadius.circular(30),
-      ),
+    return Align(
+      alignment: Alignment.topRight,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            chatCubit.userMessage[currentIndex],
-            style: AppTextStyle.poppins40014.copyWith(
-              color: const Color(0xff46454C),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 250,
+          ),
+          child: IntrinsicHeight(
+            child: Container(
+              padding: const EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.greenButton,
+                boxShadow: [
+                  BoxShadow(
+                      color: AppColors.greenButton.withOpacity(0.2),
+                      blurRadius: 10,
+                      offset: const Offset(0, 10))
+                ],
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Text(
+                chatCubit.userMessage[currentIndex],
+                style: AppTextStyle.poppins40014.copyWith(
+                  color: Colors.white,
+                ),
+                softWrap: true,
+              ),
             ),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 5,
           ),
         ),
       ),

@@ -14,19 +14,31 @@ class ChatBotContainerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 233,
-      height: 120,
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(30)),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            maxLines: 5,
-            chatCubit.chatMessages[currentIndex],
-            style: AppTextStyle.poppins40014.copyWith(color: Colors.black),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 250),
+        child: IntrinsicHeight(
+          child: Container(
+            decoration: BoxDecoration(boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.withOpacity(0.17),
+                  blurRadius: 10,
+                  offset: const Offset(0, 10))
+            ], color: Colors.white, borderRadius: BorderRadius.circular(30)),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  softWrap: true,
+                  maxLines: 5,
+                  chatCubit.chatMessages[currentIndex],
+                  style:
+                      AppTextStyle.poppins40014.copyWith(color: Colors.black),
+                ),
+              ),
+            ),
           ),
         ),
       ),

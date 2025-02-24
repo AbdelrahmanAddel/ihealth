@@ -6,27 +6,29 @@ import 'package:i_health/feature/dictionary/presentation/view/dictionary_content
 import 'dictionary_list_content.dart';
 
 Widget dictionaryListView() {
-  return GridView.builder(
-      physics: const BouncingScrollPhysics(),
-      itemCount: diseaseInfo.length,
-      gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-      itemBuilder: (context, index) {
-        return SizedBox(
-          width: 60,
-          height: 60,
-          child: GestureDetector(
-            onTap: () {
-              Navigation.push(
-                  context: context,
-                  pushScreen: DictionaryContent(
-                    index: index,
-                  ));
-            },
-            child: dictionaryListContent(
-              index: index,
-            ),
+  return ListView.separated(
+    physics: const BouncingScrollPhysics(),
+    itemCount: diseaseInfo.length,
+    itemBuilder: (context, index) {
+      return SizedBox(
+        child: GestureDetector(
+          onTap: () {
+            Navigation.push(
+                context: context,
+                pushScreen: DictionaryContent(
+                  index: index,
+                ));
+          },
+          child: dictionaryListContent(
+            index: index,
           ),
-        );
-      });
+        ),
+      );
+    },
+    separatorBuilder: (BuildContext context, int index) {
+      return const SizedBox(
+        height: 20,
+      );
+    },
+  );
 }

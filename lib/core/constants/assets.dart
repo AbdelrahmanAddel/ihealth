@@ -10,6 +10,10 @@ class Assets {
   /// assest/images/dictionary.png
   static const String assetsImagesDictionary = "assest/images/dictionary.png";
 
+  /// Assets for assetsImagesDieases
+  /// assest/images/dieases.svg
+  static const String assetsImagesDieases = "assest/images/dieases.svg";
+
   /// Assets for assetsImagesDisease
   /// assest/images/disease.svg
   static const String assetsImagesDisease = "assest/images/disease.svg";
@@ -45,6 +49,10 @@ class Assets {
   /// Assets for assetsImagesProfilep
   /// assest/images/profilep.png
   static const String assetsImagesProfilep = "assest/images/profilep.png";
+
+  /// Assets for assetsImagesRecoredAnimation
+  /// assest/images/recoredAnimation.json
+  static const String assetsImagesRecoredAnimation = "assest/images/recoredAnimation.json";
 
   /// Assets for assetsImagesReview
   /// assest/images/review.png

@@ -11,7 +11,6 @@ Widget chatTextFormField({required ChatCubit chatCubit}) {
       return SizedBox(
         height: 60,
         child: TextFormField(
-          maxLines: 3,
           controller: chatCubit.chatFormFieldController,
           style: AppTextStyle.poppins50020.copyWith(fontSize: 14),
           decoration: InputDecoration(
@@ -37,10 +36,7 @@ Widget chatTextFormField({required ChatCubit chatCubit}) {
                       color: AppColors.greenButton,
                     ),
             ),
-
-            // fillColor: AppColors.textFormFieldColor,
             filled: true,
-            hintText: 'Im feeling..',
             hintStyle: AppTextStyle.poppins50020.copyWith(fontSize: 14),
             border: OutlineInputBorder(
               borderSide: BorderSide.none,
