@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesBot
+  /// assest/images/bot.svg
+  static const String assetsImagesBot = "assest/images/bot.svg";
+
   /// Assets for assetsImagesChatp
   /// assest/images/chatp.png
   static const String assetsImagesChatp = "assest/images/chatp.png";
@@ -18,6 +22,10 @@ class Assets {
   /// assest/images/disease.svg
   static const String assetsImagesDisease = "assest/images/disease.svg";
 
+  /// Assets for assetsImagesFirst
+  /// assest/images/first.png
+  static const String assetsImagesFirst = "assest/images/first.png";
+
   /// Assets for assetsImagesFirstAd
   /// assest/images/firstAd.svg
   static const String assetsImagesFirstAd = "assest/images/firstAd.svg";
@@ -25,6 +33,10 @@ class Assets {
   /// Assets for assetsImagesFirstHu
   /// assest/images/firstHu.svg
   static const String assetsImagesFirstHu = "assest/images/firstHu.svg";
+
+  /// Assets for assetsImagesHome
+  /// assest/images/home.svg
+  static const String assetsImagesHome = "assest/images/home.svg";
 
   /// Assets for assetsImagesHospital
   /// assest/images/hospital.svg
@@ -58,6 +70,10 @@ class Assets {
   /// assest/images/review.png
   static const String assetsImagesReview = "assest/images/review.png";
 
+  /// Assets for assetsImagesSecond 
+  /// assest/images/second .png
+  static const String assetsImagesSecond  = "assest/images/second .png";
+
   /// Assets for assetsImagesSignInImage
   /// assest/images/sign_in_image.png
   static const String assetsImagesSignInImage = "assest/images/sign_in_image.png";
@@ -69,5 +85,9 @@ class Assets {
   /// Assets for assetsImagesTestPlus
   /// assest/images/testPlus.svg
   static const String assetsImagesTestPlus = "assest/images/testPlus.svg";
+
+  /// Assets for assetsImagesThird
+  /// assest/images/third.png
+  static const String assetsImagesThird = "assest/images/third.png";
 }
 

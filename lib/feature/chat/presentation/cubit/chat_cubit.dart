@@ -39,8 +39,8 @@ class ChatCubit extends Cubit<ChatState> {
     );
   }
 
-  void stopSpeech()async {
-   await speechToText.stop();
+  void stopSpeech() async {
+    await speechToText.stop();
     isListening = false;
     emit(StopListenting());
   }
