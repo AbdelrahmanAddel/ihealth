@@ -7,7 +7,7 @@ import 'package:i_health/feature/home/view/home_view.dart';
 import 'package:i_health/feature/review/presentation/view/review_screen.dart';
 
 import '../maps/get_maps.dart';
-import '../profile/presentation/view/profile_view.dart';
+import '../profile/presentation/view/screen/profile_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {

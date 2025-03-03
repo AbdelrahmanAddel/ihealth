@@ -1,41 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 
 class AppTextStyle {
-  static TextStyle poppins60030 = const TextStyle(
+  static TextStyle poppins60030 = TextStyle(
       fontFamily: AppStrings.poppins,
-      fontSize: 30,
-      color: Color(0xff4D4C4C),
+      fontSize: 30.sp,
+      color: const Color(0xff4D4C4C),
       fontWeight: FontWeight.w800);
-  static TextStyle poppins50020 = const TextStyle(
+  static TextStyle poppins50020 = TextStyle(
       fontFamily: AppStrings.poppins,
-      fontSize: 20,
-      color: Color(0xff0A0A0A),
+      fontSize: 20.sp,
+      color: const Color(0xff0A0A0A),
       fontWeight: FontWeight.w500);
-  static TextStyle poppins40014 = const TextStyle(
+  static TextStyle poppins40014 = TextStyle(
       fontFamily: AppStrings.poppins,
-      fontSize: 14,
-      color: Color(0xff908F8F),
+      fontSize: 14.sp,
+      color: const Color(0xff908F8F),
       fontWeight: FontWeight.w400);
-  static TextStyle poppins70020 = const TextStyle(
+  static TextStyle poppins70020 = TextStyle(
       fontFamily: AppStrings.poppins,
-      fontSize: 20,
-      color: Color(0xff000000),
+      fontSize: 20.sp,
+      color: const Color(0xff000000),
       fontWeight: FontWeight.w700);
   static TextStyle roboto40015 = TextStyle(
       fontFamily: AppStrings.roboto,
-      fontSize: 15,
+      fontSize: 15.sp,
       color: Colors.grey[600],
       fontWeight: FontWeight.w200);
-  static TextStyle roboto50018 = const TextStyle(
+  static TextStyle roboto50018 = TextStyle(
       fontFamily: AppStrings.roboto,
-      fontSize: 18,
+      fontSize: 18.sp,
       color: AppColors.greenButton,
       fontWeight: FontWeight.w600);
-  static TextStyle roboto70018 = const TextStyle(
+  static TextStyle roboto70018 = TextStyle(
       fontFamily: AppStrings.roboto,
-      fontSize: 18,
+      fontSize: 18.sp,
       color: AppColors.greenText,
       fontWeight: FontWeight.w600);
 }

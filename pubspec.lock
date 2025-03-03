@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.52"
+  adaptive_screen_utils:
+    dependency: "direct main"
+    description:
+      name: adaptive_screen_utils
+      sha256: "57036d117d44ac693b9aa0b739106deb369a7baa2c622b78ed1da9972be9b942"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.0"
   archive:
     dependency: transitive
     description:
@@ -283,6 +291,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.0.0"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      sha256: "8239210dd68bee6b0577aa4a090890342d04a136ce1c81f98ee513fc0ce891de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.9.3"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -645,14 +661,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.2"
-  responsive_sizer:
-    dependency: "direct main"
-    description:
-      name: responsive_sizer
-      sha256: "6aefee6065c0883681bc7559147a24d8fa1846d296a216abcda25ff349340712"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.3.1"
   shared_preferences:
     dependency: "direct main"
     description:

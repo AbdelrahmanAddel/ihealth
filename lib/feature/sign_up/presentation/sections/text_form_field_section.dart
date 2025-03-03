@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/feature/sign_up/presentation/cubit/signup_cubit.dart';
 import '../../../../core/common/widget/custom_text_form_field.dart';
@@ -21,26 +22,26 @@ class SignUpBody extends StatelessWidget {
             controller: cubit.fullName,
             textFormHintText: AppStrings.enterYourFullName,
           ),
-          const SizedBox(height: 43),
+          SizedBox(height: 43.h),
           CustomTextFormField(
             controller: cubit.email,
             textFormHintText: AppStrings.enterYourEmail,
           ),
-          const SizedBox(height: 43),
+          SizedBox(height: 43.h),
           CustomTextFormField(
             controller: cubit.phoneNumber,
             textFormHintText: AppStrings.enterYourPhoneNumber,
           ),
-          const SizedBox(height: 43),
+          SizedBox(height: 43.h),
           CustomTextFormField(
             controller: cubit.password,
             textFormHintText: AppStrings.enterYourPassword,
           ),
-          const SizedBox(
-            height: 64,
+          SizedBox(
+            height: 64.h,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 38.0),
+            padding: EdgeInsets.symmetric(horizontal: 38.0.w),
             child: SignUpCustomButton(
               buttonText: AppStrings.signUp,
               formKey: formKey,

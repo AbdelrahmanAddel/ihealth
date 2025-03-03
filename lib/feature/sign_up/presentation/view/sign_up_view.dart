@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 
@@ -22,27 +23,27 @@ class SignUpView extends StatelessWidget {
         backgroundColor: AppColors.registerBackGround,
         body: CustomScrollView(
           slivers: [
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: SizedBox(
-                height: 100,
+                height: 100.h,
               ),
             ),
             SliverToBoxAdapter(
               child: signUpHeadSection(),
             ),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: SizedBox(
-                height: 67,
+                height: 67.h,
               ),
             ),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
                 child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: SignUpBody(),
+              padding: EdgeInsets.symmetric(horizontal: 30.w),
+              child: const SignUpBody(),
             )),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: SizedBox(
-                height: 25,
+                height: 25.h,
               ),
             ),
             SliverToBoxAdapter(
