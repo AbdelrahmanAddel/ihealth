@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/feature/home/home.dart';
@@ -42,11 +43,11 @@ class SignInCustomButton extends StatelessWidget {
 
         return GestureDetector(
           child: Container(
-            width: widget ?? 308,
-            height: height ?? 58,
+            width: widget ?? 308.w,
+            height: height ?? 58.h,
             decoration: BoxDecoration(
                 color: AppColors.greenButton,
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(20.r)),
             child: Center(
               child: state is LoadingToSignIn
                   ? const CircularProgressIndicator(color: Colors.white)

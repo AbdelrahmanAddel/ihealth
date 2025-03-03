@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:i_health/core/constants/app_colors.dart';
+import 'package:i_health/core/common/widget/custom_text_buttom.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/core/functions/navigation.dart';
@@ -27,7 +27,8 @@ class UserModification extends StatelessWidget {
             suffixIcon: IconButton(
                 onPressed: () {
                   Navigation.push(
-                      context: context, pushScreen: const UpdataUserProfileData());
+                      context: context,
+                      pushScreen: const UpdataUserProfileData());
                 },
                 icon: Icon(Icons.arrow_forward_ios, color: Colors.grey[600])),
           ),
@@ -47,23 +48,18 @@ class UserModification extends StatelessWidget {
             ),
           ),
           verticalSpace(60.h),
-          TextButton(
-              style: TextButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  backgroundColor: AppColors.greenButton,
-                  minimumSize: Size(double.infinity, 50.h)),
-              onPressed: () async {
-                await FirebaseAuth.instance.signOut();
+          CustomTextButtom(
+            child: Text(
+              AppStrings.logout,
+              style: AppTextStyle.poppins40014.copyWith(color: Colors.white),
+            ),
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
 
-                Navigation.pushRepl(
-                    context: context, pushScreen: const SignInView());
-              },
-              child: Text(
-                AppStrings.logout,
-                style: AppTextStyle.poppins40014.copyWith(color: Colors.white),
-              ))
+              Navigation.pushRepl(
+                  context: context, pushScreen: const SignInView());
+            },
+          )
         ],
       ),
     );

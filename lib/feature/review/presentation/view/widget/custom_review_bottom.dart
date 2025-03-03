@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/common/widget/custom_flutter_toast.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
@@ -16,11 +17,11 @@ class CustomReviewButton extends StatelessWidget {
         final cubit = BlocProvider.of<ReviewsCubit>(context);
         return GestureDetector(
           child: Container(
-            width: 90,
-            height: 45,
+            width: 90.w,
+            height: 45.h,
             decoration: BoxDecoration(
                 color: AppColors.greenButton,
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(20.r)),
             child: Center(
               child: state is LoadingToAddReview
                   ? const CircularProgressIndicator(color: Colors.white)

@@ -4,10 +4,10 @@ import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/assets.dart';
 import 'package:i_health/feature/dictionary/presentation/view/dictionary_view.dart';
 import 'package:i_health/feature/home/view/home_view.dart';
+import 'package:i_health/feature/profile/presentation/view/profile_view.dart';
 import 'package:i_health/feature/review/presentation/view/review_screen.dart';
 
 import '../maps/get_maps.dart';
-import '../profile/presentation/view/screen/profile_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const MapScreen(),
           const DictionaryView(),
           ReviewView(),
-          const ProfileView(),
+          ProfileView(),
         ][currentIndex]);
   }
 }

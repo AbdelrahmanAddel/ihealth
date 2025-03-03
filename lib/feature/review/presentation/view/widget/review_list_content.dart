@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/feature/review/presentation/cubit/reviews_cubit.dart';
@@ -14,8 +15,8 @@ class ReviewListContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+      height: 150.h,
+      margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.green.shade200,
@@ -34,26 +35,26 @@ class ReviewListContent extends StatelessWidget {
         children: [
           Row(
             children: [
-              const CircleAvatar(
+              CircleAvatar(
                 backgroundColor: AppColors.greenButton,
-                radius: 22,
+                radius: 22.r,
                 child: Icon(
                   Icons.person,
                   color: Colors.white,
-                  size: 30,
+                  size: 30.sp,
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10.w),
               Expanded(
                 child: Text(
                   state.reviews[index].userName,
-                  style: AppTextStyle.poppins60030.copyWith(fontSize: 17),
+                  style: AppTextStyle.poppins60030.copyWith(fontSize: 17.sp),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 6),
+          SizedBox(height: 6.h),
           Text(
             '${state.reviews[index].timestamp.toDate().year}-'
             '${state.reviews[index].timestamp.toDate().month}-'
@@ -62,11 +63,11 @@ class ReviewListContent extends StatelessWidget {
             '${state.reviews[index].timestamp.toDate().minute}',
             style: AppTextStyle.poppins60030.copyWith(fontSize: 14),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             state.reviews[index].review,
-            style: const TextStyle(
-              fontSize: 16,
+            style: TextStyle(
+              fontSize: 16.sp,
               fontWeight: FontWeight.w500,
               color: Colors.black87,
               height: 1.5,

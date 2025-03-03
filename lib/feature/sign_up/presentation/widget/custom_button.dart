@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/feature/sign_up/presentation/cubit/signup_cubit.dart';
 
 import '../../../../core/constants/app_colors.dart';
@@ -26,11 +27,11 @@ class SignUpCustomButton extends StatelessWidget {
       builder: (context, state) {
         return GestureDetector(
           child: Container(
-            width: 308,
-            height: 58,
+            width: 308.w,
+            height: 58.h,
             decoration: BoxDecoration(
                 color: AppColors.greenButton,
-                borderRadius: BorderRadius.circular(20)),
+                borderRadius: BorderRadius.circular(20.r)),
             child: Center(
               child: state is LoadingTosignUp
                   ? const CircularProgressIndicator(color: Colors.white)

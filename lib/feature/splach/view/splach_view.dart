@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
@@ -29,15 +30,15 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(Assets.assetsImagesSplachPlus),
-            const SizedBox(
-              height: 32,
+            SizedBox(
+              height: 32.h,
             ),
             Text(
               AppStrings.iHealth,
               style: AppTextStyle.poppins60030,
             ),
-            const SizedBox(
-              height: 75,
+            SizedBox(
+              height: 75.h,
             ),
             Text(
               AppStrings.healthFirst,

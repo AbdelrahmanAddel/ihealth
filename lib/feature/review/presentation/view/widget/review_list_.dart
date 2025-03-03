@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/feature/review/presentation/cubit/reviews_cubit.dart';
 
 import 'review_list_content.dart';
@@ -18,7 +19,7 @@ class ReviewsList extends StatelessWidget {
           itemCount: state is GetReviewsSuccess ? state.reviews.length : 0,
           itemBuilder: (context, index) {
             return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                padding:  EdgeInsets.symmetric(horizontal: 16.0.w),
                 child: state is LoadingToGetReviews
                     ? const CustomScrollView()
                     : state is GetReviewsSuccess
