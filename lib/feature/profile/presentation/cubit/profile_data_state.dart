@@ -18,3 +18,17 @@ final class GetUserProfileDataSuccess extends ProfileDataState {
 
   GetUserProfileDataSuccess({required this.profileData});
 }
+
+final class LoadingToUpdataUserData extends ProfileDataState {}
+
+final class UpdataUserDataSuccess extends ProfileDataState {
+  final String successMessage;
+
+  UpdataUserDataSuccess({required this.successMessage});
+}
+
+final class FailureToUpdataUserData extends ProfileDataState {
+  final String errorMessage;
+
+  FailureToUpdataUserData({required this.errorMessage});
+}

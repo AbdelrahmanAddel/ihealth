@@ -14,13 +14,15 @@ class ProfileView extends StatelessWidget {
     return BlocProvider(
       create: (context) => ProfileDataCubit()..getUserProfileData(),
       child: Scaffold(
-        body: Column(
-          children: [
-            verticalSpace(60.h),
-            profileViewAppBarSection(),
-            verticalSpace(55.h),
-            const ProfileViewBody()
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              verticalSpace(60.h),
+              profileViewAppBarSection(),
+              verticalSpace(55.h),
+              const ProfileViewBody()
+            ],
+          ),
         ),
       ),
     );

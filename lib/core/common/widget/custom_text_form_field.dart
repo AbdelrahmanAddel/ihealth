@@ -4,10 +4,14 @@ import '../../constants/app_text_style.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
-      {super.key, required this.textFormHintText, this.controller, this.enable});
+      {super.key,
+      required this.textFormHintText,
+      this.controller,
+      this.enable});
   final String textFormHintText;
   final TextEditingController? controller;
-  final bool  ? enable;
+  final bool? enable;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

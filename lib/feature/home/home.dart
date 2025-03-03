@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const MapScreen(),
           const DictionaryView(),
           ReviewView(),
-          ProfileView(),
+          const ProfileView(),
         ][currentIndex]);
   }
 }

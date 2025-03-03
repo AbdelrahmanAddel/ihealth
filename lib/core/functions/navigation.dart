@@ -6,7 +6,7 @@ class Navigation {
         context, MaterialPageRoute(builder: (builder) => pushScreen));
   }
 
-  static pop({required BuildContext context, required Widget pushScreen}) {
+  static pop({required BuildContext context}) {
     Navigator.pop(context);
   }
 

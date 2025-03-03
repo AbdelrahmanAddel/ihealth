@@ -4,6 +4,7 @@ class AppStrings {
       updataInfo = 'updata Info',
       changePassowrd = 'Change Passowrd',
       about = 'About',
+      fullName = 'Full Name',
       logout = 'logout',
       welcomeBack = 'Welcome Back !',
       forgetPassword = 'Forgot Password ?',

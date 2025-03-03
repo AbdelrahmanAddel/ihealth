@@ -34,20 +34,21 @@ class UserModification extends StatelessWidget {
           ),
           verticalSpace(20),
           ProfileInfoRow(
-            prefixIcon: Icon(Icons.lock, color: Colors.grey[600]),
-            rowText: AppStrings.changePassowrd,
-            suffixIcon: Icon(Icons.arrow_forward_ios, color: Colors.grey[600]),
-          ),
+              prefixIcon: Icon(Icons.lock, color: Colors.grey[600]),
+              rowText: AppStrings.changePassowrd,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, color: Colors.grey[600]),
+              )),
           verticalSpace(20),
           ProfileInfoRow(
-            prefixIcon: Icon(Icons.info, color: Colors.grey[600]),
-            rowText: AppStrings.about,
-            suffixIcon: Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.grey[600],
-            ),
-          ),
-          verticalSpace(60.h),
+              prefixIcon: Icon(Icons.info, color: Colors.grey[600]),
+              rowText: AppStrings.about,
+              suffixIcon: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, color: Colors.grey[600]),
+              )),
+          verticalSpace(60),
           CustomTextButtom(
             child: Text(
               AppStrings.logout,
