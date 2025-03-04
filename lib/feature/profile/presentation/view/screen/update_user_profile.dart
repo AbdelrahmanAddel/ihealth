@@ -8,8 +8,8 @@ import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/core/helper/spaceing.dart';
+import 'package:i_health/feature/home/home.dart';
 import 'package:i_health/feature/profile/presentation/cubit/profile_data_cubit.dart';
-import 'package:i_health/feature/profile/presentation/view/profile_view.dart';
 import 'package:i_health/feature/profile/presentation/view/section/profile_view_appbar_section.dart';
 
 class UpdataUserProfileData extends StatelessWidget {
@@ -91,13 +91,13 @@ class UpdataUserProfileData extends StatelessWidget {
                           ),
                         ),
                       )
-                    : state is LoadingToUpdataUserData
-                        ? const Center(
+                    : state is FailureToGetUserProfileData
+                        ? Center(child: Text(state.errorMessage))
+                        : const Center(
                             child: CircularProgressIndicator(
                               color: AppColors.greenButton,
                             ),
-                          )
-                        : const Center(child: Text('Some Thing Went Wrong'))),
+                          )),
           );
         },
         listener: (BuildContext context, ProfileDataState state) {
@@ -105,7 +105,7 @@ class UpdataUserProfileData extends StatelessWidget {
             customFlutterToast(
                 message: state.successMessage, color: AppColors.greenButton);
             Navigation.pushRepl(
-                context: context, pushScreen: const ProfileView());
+                context: context, pushScreen: const HomeScreen());
           } else if (state is FailureToUpdataUserData) {
             customFlutterToast(message: state.errorMessage);
           }

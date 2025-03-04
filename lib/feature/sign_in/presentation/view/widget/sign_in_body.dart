@@ -21,60 +21,62 @@ class SignInBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Column(
-        children: [
-          SizedBox(
-            height: 55.h,
-          ),
-          Text(
-            AppStrings.welcomeBack,
-            style: AppTextStyle.poppins70020,
-          ),
-          SizedBox(
-            height: 64.h,
-          ),
-          Image.asset(
-            Assets.assetsImagesSignInImage,
-          ),
-          SizedBox(
-            height: 51.h,
-          ),
-          CustomTextFormField(
-              controller: cubit.email,
-              textFormHintText: AppStrings.enterYourEmail),
-          SizedBox(
-            height: 38.h,
-          ),
-          CustomTextFormField(
-              controller: cubit.password,
-              textFormHintText: AppStrings.enterYourPassword),
-          SizedBox(
-            height: 35.h,
-          ),
-          Text(
-            AppStrings.forgetPassword,
-            style: AppTextStyle.roboto70018,
-          ),
-          SizedBox(
-            height: 37.h,
-          ),
-          SignInCustomButton(
-            buttonText: AppStrings.signIn,
-            formKey: formKey,
-          ),
-          SizedBox(
-            height: 30.h,
-          ),
-          customTextSpan(
-              firstText: AppStrings.dontHaveAcc,
-              lastText: AppStrings.signIn,
-              onTap: () {
-                Navigation.pushRepl(
-                    context: context, pushScreen: const SignUpView());
-              })
-        ],
+    return SingleChildScrollView(
+      child: Form(
+        key: formKey,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 55.h,
+            ),
+            Text(
+              AppStrings.welcomeBack,
+              style: AppTextStyle.poppins70020,
+            ),
+            SizedBox(
+              height: 64.h,
+            ),
+            Image.asset(
+              Assets.assetsImagesSignInImage,
+            ),
+            SizedBox(
+              height: 51.h,
+            ),
+            CustomTextFormField(
+                controller: cubit.email,
+                textFormHintText: AppStrings.enterYourEmail),
+            SizedBox(
+              height: 38.h,
+            ),
+            CustomTextFormField(
+                controller: cubit.password,
+                textFormHintText: AppStrings.enterYourPassword),
+            SizedBox(
+              height: 35.h,
+            ),
+            Text(
+              AppStrings.forgetPassword,
+              style: AppTextStyle.roboto70018,
+            ),
+            SizedBox(
+              height: 37.h,
+            ),
+            SignInCustomButton(
+              buttonText: AppStrings.signIn,
+              formKey: formKey,
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
+            customTextSpan(
+                firstText: AppStrings.dontHaveAcc,
+                lastText: AppStrings.signIn,
+                onTap: () {
+                  Navigation.pushRepl(
+                      context: context, pushScreen: const SignUpView());
+                })
+          ],
+        ),
       ),
     );
   }

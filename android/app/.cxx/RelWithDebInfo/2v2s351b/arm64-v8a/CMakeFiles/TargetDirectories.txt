@@ -1,0 +1,2 @@
+/Users/abdelrahmanadelezeldean/Desktop/i_health 2/android/app/.cxx/RelWithDebInfo/2v2s351b/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/abdelrahmanadelezeldean/Desktop/i_health 2/android/app/.cxx/RelWithDebInfo/2v2s351b/arm64-v8a/CMakeFiles/rebuild_cache.dir

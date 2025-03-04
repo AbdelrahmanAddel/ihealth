@@ -11,7 +11,6 @@ import 'package:i_health/core/constants/assets.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/core/helper/spaceing.dart';
 import 'package:i_health/feature/profile/presentation/cubit/profile_data_cubit.dart';
-import 'package:i_health/feature/profile/presentation/view/profile_view.dart';
 import 'package:i_health/feature/profile/presentation/view/section/profile_view_appbar_section.dart';
 
 class ChangeUserPassword extends StatelessWidget {
@@ -80,20 +79,15 @@ class ChangeUserPassword extends StatelessWidget {
                         ),
                       ),
                     );
-                  } else if (state is LoadingToUpdateUserPassword) {
-                    return const Center(
-                      child: CircularProgressIndicator(
-                        color: AppColors.greenButton,
-                      ),
-                    );
                   } else if (state is FailureToUpdateuserPassword) {
                     return Center(
                       child: Text(state.errorMessage),
                     );
                   } else {
                     return const Center(
-                      child: Text('Some Thing Went Wrong'),
-                    );
+                        child: CircularProgressIndicator(
+                      color: AppColors.greenButton,
+                    ));
                   }
                 },
               ),
@@ -104,8 +98,7 @@ class ChangeUserPassword extends StatelessWidget {
           if (state is UpdateUserPasswordSuccess) {
             customFlutterToast(
                 message: state.successMessage, color: AppColors.greenButton);
-            Navigation.pushRepl(
-                context: context, pushScreen: const ProfileView());
+            Navigation.pop(context: context);
           } else if (state is FailureToUpdateuserPassword) {
             customFlutterToast(message: state.errorMessage);
           }
