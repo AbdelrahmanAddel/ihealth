@@ -81,7 +81,7 @@ class UpdataUserProfileData extends StatelessWidget {
                                     onPressed: () {
                                       if (cubit.formKey.currentState!
                                           .validate()) {
-                                        cubit.updataUserProfileData();
+                                        cubit.updateUserProfileData();
                                       }
                                     },
                                   )
