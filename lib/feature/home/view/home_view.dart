@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
@@ -17,15 +18,15 @@ class HomeView extends StatelessWidget {
           child: Column(
         children: [
           const HomeViewAppBar(),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           ChatButtonAndText(),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 25.h,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            padding: EdgeInsets.symmetric(horizontal: 15.0.w),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -35,11 +36,11 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 33,
+          SizedBox(
+            height: 33.h,
           ),
           SizedBox(
-              height: 500,
+              height: 500.h,
               child: PageView.builder(
                 itemCount: 3,
                 itemBuilder: (context, index) {

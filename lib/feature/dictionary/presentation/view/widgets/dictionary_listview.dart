@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/feature/dictionary/data/disease_info.dart';
 import 'package:i_health/feature/dictionary/presentation/view/dictionary_content.dart';
@@ -26,8 +27,8 @@ Widget dictionaryListView() {
       );
     },
     separatorBuilder: (BuildContext context, int index) {
-      return const SizedBox(
-        height: 20,
+      return  SizedBox(
+        height: 20.h,
       );
     },
   );

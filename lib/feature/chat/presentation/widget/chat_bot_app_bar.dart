@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/constants/app_strings.dart';
@@ -11,19 +12,19 @@ Widget chatBotAppBar() {
     children: [
       const Spacer(),
       SvgPicture.asset(Assets.assetsImagesTestPlus),
-      const SizedBox(
-        width: 9,
+      SizedBox(
+        width: 9.w,
       ),
       Text(
         AppStrings.iHealth,
-        style: AppTextStyle.poppins60030.copyWith(fontSize: 16),
+        style: AppTextStyle.poppins60030.copyWith(fontSize: 16.sp),
       ),
-      const SizedBox(
-        width: 50,
+      SizedBox(
+        width: 50.w,
       ),
       Text(
         AppStrings.chat,
-        style: AppTextStyle.poppins60030.copyWith(fontSize: 24),
+        style: AppTextStyle.poppins60030.copyWith(fontSize: 24.sp),
       ),
     ],
   );

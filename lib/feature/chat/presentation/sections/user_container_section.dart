@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/feature/chat/presentation/cubit/chat_cubit.dart';
 
 import '../../../../core/constants/app_colors.dart';
@@ -18,10 +19,10 @@ class UserContainerSection extends StatelessWidget {
     return Align(
       alignment: Alignment.topRight,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        padding:  EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
         child: ConstrainedBox(
-          constraints: const BoxConstraints(
-            maxWidth: 250,
+          constraints:  BoxConstraints(
+            maxWidth: 250.w,
           ),
           child: IntrinsicHeight(
             child: Container(
@@ -34,7 +35,7 @@ class UserContainerSection extends StatelessWidget {
                       blurRadius: 10,
                       offset: const Offset(0, 10))
                 ],
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(30.r),
               ),
               child: Text(
                 chatCubit.userMessage[currentIndex],

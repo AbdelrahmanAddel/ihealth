@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/assets.dart';
@@ -35,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
           items: [
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                width: 25,
-                height: 25,
+                width: 25.w,
+                height: 25.h,
                 Assets.assetsImagesHome,
                 color: currentIndex == 0 ? AppColors.greenButton : Colors.black,
               ),
@@ -44,8 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
-                width: 25,
-                height: 25,
+                width: 25.w,
+                height: 25.h,
                 Assets.assetsImagesMap,
                 color: currentIndex == 1 ? AppColors.greenButton : Colors.black,
               ),
@@ -53,8 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
-                width: 25,
-                height: 25,
+                width: 25.w,
+                height: 25.h,
                 Assets.assetsImagesDictionary,
                 color: currentIndex == 2 ? AppColors.greenButton : Colors.black,
               ),
@@ -62,8 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
-                width: 25,
-                height: 25,
+                width: 25.w,
+                height: 25.h,
                 Assets.assetsImagesReview,
                 color: currentIndex == 3 ? AppColors.greenButton : Colors.black,
               ),
@@ -71,8 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
-                width: 25,
-                height: 25,
+                width: 25.w,
+                height: 25.h,
                 Assets.assetsImagesProfilep,
                 color: currentIndex == 4 ? AppColors.greenButton : Colors.black,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/constants/app_text_style.dart';
 import '../cubit/chat_cubit.dart';
@@ -15,15 +16,15 @@ class ChatBotContainerSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      padding:  EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 250),
+        constraints: BoxConstraints(maxWidth: 250.w),
         child: IntrinsicHeight(
           child: Container(
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
                   color: Colors.grey.withOpacity(0.17),
-                  blurRadius: 10,
+                  blurRadius: 10.r,
                   offset: const Offset(0, 10))
             ], color: Colors.white, borderRadius: BorderRadius.circular(30)),
             child: Padding(

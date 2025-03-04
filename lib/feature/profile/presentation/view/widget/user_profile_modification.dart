@@ -6,6 +6,7 @@ import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/core/helper/spaceing.dart';
+import 'package:i_health/feature/profile/presentation/view/screen/about_us.dart';
 import 'package:i_health/feature/profile/presentation/view/screen/update_user_profile.dart';
 import 'package:i_health/feature/profile/presentation/view/widget/profile_info_row.dart';
 import 'package:i_health/feature/sign_in/presentation/view/sign_in_view.dart';
@@ -45,7 +46,10 @@ class UserModification extends StatelessWidget {
               prefixIcon: Icon(Icons.info, color: Colors.grey[600]),
               rowText: AppStrings.about,
               suffixIcon: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigation.push(
+                      context: context, pushScreen: const AboutUsPage());
+                },
                 icon: Icon(Icons.arrow_forward_ios, color: Colors.grey[600]),
               )),
           verticalSpace(60),

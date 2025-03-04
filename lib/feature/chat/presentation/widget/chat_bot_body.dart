@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../cubit/chat_cubit.dart';
 import '../sections/chat_bot_container_section.dart';
@@ -12,7 +13,7 @@ class ChatBotBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 16.0.w),
       child: Column(
         children: [
           Align(
@@ -21,8 +22,8 @@ class ChatBotBody extends StatelessWidget {
                 chatCubit: chatCubit,
                 currentIndex: currentIndex,
               )),
-          const SizedBox(
-            height: 35,
+          SizedBox(
+            height: 35.h,
           ),
           Align(
               alignment: Alignment.topLeft,
@@ -30,12 +31,11 @@ class ChatBotBody extends StatelessWidget {
                 chatCubit: chatCubit,
                 currentIndex: currentIndex,
               )),
-          const SizedBox(
-            height: 35,
+          SizedBox(
+            height: 35.h,
           ),
         ],
       ),
     );
   }
 }
-

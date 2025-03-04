@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/feature/chat/presentation/cubit/chat_cubit.dart';
 
 import '../widget/chat_bot_app_bar.dart';
@@ -20,11 +21,11 @@ class ChatView extends StatelessWidget {
 
             return Column(
               children: [
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 37.0),
+                  padding: EdgeInsets.symmetric(horizontal: 37.0.h),
                   child: chatBotAppBar(),
                 ),
                 Expanded(
@@ -48,11 +49,11 @@ class ChatView extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                  padding: EdgeInsets.symmetric(horizontal: 13.0.w),
                   child: chatTextFormField(chatCubit: cubit),
                 ),
-                const SizedBox(
-                  height: 5,
+                SizedBox(
+                  height: 5.h,
                 ),
               ],
             );

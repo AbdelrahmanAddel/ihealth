@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/feature/chat/presentation/cubit/chat_cubit.dart';
@@ -9,10 +10,10 @@ Widget chatTextFormField({required ChatCubit chatCubit}) {
   return BlocBuilder<ChatCubit, ChatState>(
     builder: (context, state) {
       return SizedBox(
-        height: 60,
+        height: 60.h,
         child: TextFormField(
           controller: chatCubit.chatFormFieldController,
-          style: AppTextStyle.poppins50020.copyWith(fontSize: 14),
+          style: AppTextStyle.poppins50020.copyWith(fontSize: 14.sp),
           decoration: InputDecoration(
             prefixIcon: MaterialButton(
               onPressed: chatCubit.isListening
@@ -37,10 +38,10 @@ Widget chatTextFormField({required ChatCubit chatCubit}) {
                     ),
             ),
             filled: true,
-            hintStyle: AppTextStyle.poppins50020.copyWith(fontSize: 14),
+            hintStyle: AppTextStyle.poppins50020.copyWith(fontSize: 14.sp),
             border: OutlineInputBorder(
               borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(25.r),
             ),
           ),
         ),

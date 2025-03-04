@@ -2,6 +2,7 @@ import 'dart:async'; // أضف هذه الاستيراد لاستخدام Stream
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/assets.dart';
@@ -44,13 +45,12 @@ class _MapScreenState extends State<MapScreen> {
     try {
       var userLocation = await location.getLocation();
       if (!_isDisposed && mounted) {
-        // التحقق من أن الـ Widget ما زال موجودًا
         setState(() {
           currentLocation = userLocation;
           markers.add(
             Marker(
-              width: 50.0,
-              height: 50.0,
+              width: 50.0.w,
+              height: 50.0.h,
               point: LatLng(userLocation.latitude!, userLocation.longitude!),
               child: SvgPicture.asset(Assets.assetsImagesMarker),
             ),
@@ -125,8 +125,8 @@ class _MapScreenState extends State<MapScreen> {
 
           markers.add(
             Marker(
-              width: 50.0,
-              height: 50.0,
+              width: 50.0.w,
+              height: 50.0.h,
               point: placeLocation,
               child: Tooltip(
                 message: name,
@@ -147,11 +147,10 @@ class _MapScreenState extends State<MapScreen> {
         if (markers.isNotEmpty) {
           Future.delayed(const Duration(milliseconds: 500), () {
             if (!_isDisposed && mounted) {
-              // التحقق من أن الـ Widget ما زال موجودًا
               try {
                 mapController.move(
                   markers.first.point,
-                  14.0, // تكبير الخريطة للموقع الجديد
+                  14.0,
                 );
               } catch (e) {
                 print('❌ خطأ أثناء تحريك الخريطة: $e');
@@ -166,7 +165,7 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   Future<void> fetchRoute(LatLng start, LatLng end, String placeType) async {
-    if (_isDisposed) return; // التحقق من حالة الـ Widget
+    if (_isDisposed) return;
 
     final String url =
         "https://router.project-osrm.org/route/v1/driving/${start.longitude},${start.latitude};${end.longitude},${end.latitude}?overview=full&geometries=geojson";
@@ -175,7 +174,6 @@ class _MapScreenState extends State<MapScreen> {
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode == 200 && !_isDisposed && mounted) {
-        // التحقق من حالة الـ Widget
         final data = json.decode(response.body);
         final List<dynamic> coordinates =
             data['routes'][0]['geometry']['coordinates'];
@@ -202,9 +200,9 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'IHealth Map',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
         ),
       ),
       body: currentLocation == null

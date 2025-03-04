@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:i_health/core/constants/app_colors.dart';
 import 'package:i_health/core/constants/app_strings.dart';
@@ -20,23 +21,23 @@ class ChatButtonAndText extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          padding:  EdgeInsets.symmetric(horizontal: 15.0.w),
           child: Text('Hi $userName ${AppStrings.askMe}',
-              style: AppTextStyle.poppins60030.copyWith(fontSize: 20),
+              style: AppTextStyle.poppins60030.copyWith(fontSize: 20.sp),
               textAlign: TextAlign.start),
         ),
-        const SizedBox(
-          height: 25,
+         SizedBox(
+          height: 25.h,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          padding:  EdgeInsets.symmetric(horizontal: 15.0.w),
           child: TextButton(
               style: ButtonStyle(
                 minimumSize:
-                    WidgetStateProperty.all(const Size(double.infinity, 50)),
+                    WidgetStateProperty.all( Size(double.infinity, 50.h)),
                 backgroundColor: WidgetStateProperty.all(AppColors.greenButton),
                 shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15))),
+                    borderRadius: BorderRadius.circular(15.r))),
               ),
               onPressed: () {
                 Navigation.push(context: context, pushScreen: const ChatView());

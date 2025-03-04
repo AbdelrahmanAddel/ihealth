@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import 'package:i_health/core/functions/navigation.dart';
 import 'package:i_health/feature/home/data/home_data.dart';
@@ -10,17 +11,17 @@ class DieaseListsAndText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      padding: EdgeInsets.symmetric(horizontal: 15.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
             child: GestureDetector(
               child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(15.r),
                   child: Image.asset(
-                    height: 300,
-                    width: 380,
+                    height: 300.h,
+                    width: 380.w,
                     HomeData.homeData[index].imageUrl,
                     fit: BoxFit.fill,
                   )),
@@ -30,19 +31,19 @@ class DieaseListsAndText extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Text(HomeData.homeData[index].title,
-              style: AppTextStyle.poppins60030.copyWith(fontSize: 20),
+              style: AppTextStyle.poppins60030.copyWith(fontSize: 20.sp),
               textAlign: TextAlign.start),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Text(HomeData.homeData[index].description,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: AppTextStyle.poppins40014.copyWith(fontSize: 15),
+              style: AppTextStyle.poppins40014.copyWith(fontSize: 15.sp),
               textAlign: TextAlign.start),
         ],
       ),

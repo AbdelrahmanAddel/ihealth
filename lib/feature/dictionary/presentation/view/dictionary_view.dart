@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/dictionary_app_bar.dart';
 import 'widgets/dictionary_listview.dart';
@@ -13,11 +14,12 @@ class DictionaryView extends StatelessWidget {
         child: Column(
           children: [
             dictionaryAppBar(),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
-            Expanded(child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:  8.0),
+            Expanded(
+                child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w),
               child: dictionaryListView(),
             )),
           ],

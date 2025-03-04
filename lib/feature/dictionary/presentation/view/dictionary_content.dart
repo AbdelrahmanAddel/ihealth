@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:i_health/core/constants/app_strings.dart';
 import 'package:i_health/core/constants/app_text_style.dart';
 import '../../data/disease_info.dart';
@@ -14,12 +15,12 @@ class DictionaryContent extends StatelessWidget {
         centerTitle: true,
         title: Text(
           diseaseInfo[index].disease,
-          style: AppTextStyle.poppins60030.copyWith(fontSize: 25),
+          style: AppTextStyle.poppins60030.copyWith(fontSize: 25.sp),
         ),
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 10.h),
           child: ListView(
             physics: const BouncingScrollPhysics(),
             children: [
@@ -66,25 +67,25 @@ class DictionaryContent extends StatelessWidget {
               sectionContent(diseaseInfo[index].references),
               divider(),
               sectionTitle(AppStrings.diseaseImage),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
               Center(
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.1),
-                        blurRadius: 5,
+                        blurRadius: 5.r,
                         offset: const Offset(0, 3),
                       ),
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                     child: Image.asset(
                       diseaseInfo[index].image,
                       width: double.infinity,
-                      height: 250,
+                      height: 250.h,
                       fit: BoxFit.contain,
                     ),
                   ),

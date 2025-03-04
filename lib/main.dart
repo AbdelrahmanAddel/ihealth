@@ -4,6 +4,7 @@ import 'package:i_health/feature/home/home.dart';
 
 import 'package:i_health/feature/home/view/home_view.dart';
 import 'package:i_health/feature/profile/presentation/view/profile_view.dart';
+import 'package:i_health/feature/profile/presentation/view/screen/about_us.dart';
 import 'package:i_health/feature/profile/presentation/view/widget/profile_view_body.dart';
 import 'package:i_health/feature/sign_in/data/data_source/local_data/shared_pre.dart';
 import 'package:i_health/feature/sign_in/presentation/view/sign_in_view.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child:
-          MaterialApp(debugShowCheckedModeBanner: false, home: ProfileView()),
+          MaterialApp(debugShowCheckedModeBanner: false, home: AboutUsPage()),
     );
   }
 }

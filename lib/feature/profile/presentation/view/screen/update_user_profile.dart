@@ -44,6 +44,16 @@ class UpdataUserProfileData extends StatelessWidget {
                                   verticalSpace(20),
                                   TextField(
                                     readOnly: true,
+                                    decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      hintText: state.profileData.email,
+                                      hintStyle: AppTextStyle.roboto40015,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(20),
+                                        borderSide: BorderSide.none,
+                                      ),
+                                    ),
                                   ),
                                   verticalSpace(20),
                                   CustomTextFormField(
@@ -81,7 +91,7 @@ class UpdataUserProfileData extends StatelessWidget {
                           ),
                         ),
                       )
-                    : state is LoadingToGetUserProfileData
+                    : state is LoadingToUpdataUserData
                         ? const Center(
                             child: CircularProgressIndicator(
                               color: AppColors.greenButton,
