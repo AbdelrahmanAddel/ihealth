@@ -28,8 +28,7 @@ class SendDataToApiImpl extends SendDataToApi {
           return const Right(
               "I’m sorry, I couldn’t find a diagnosis for your symptoms. Please make sure to enter valid symptoms, and try again.");
         } else {
-          return Right(
-              'I suspect that you might have  ${data['prediction'].toString()}');
+          return Right('${data['prediction'].toString()}');
         }
       } else {
         return Left(Failure('Error: ${response.reasonPhrase}'));

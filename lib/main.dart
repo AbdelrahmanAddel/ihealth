@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:i_health/feature/home/home.dart';
 import 'package:i_health/feature/sign_in/data/data_source/local_data/shared_pre.dart';
 import 'package:i_health/feature/sign_in/presentation/view/sign_in_view.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: SignInView()),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen()),
     );
   }
 }

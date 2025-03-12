@@ -27,9 +27,11 @@ class ChatBotBody extends StatelessWidget {
           ),
           Align(
               alignment: Alignment.topLeft,
-              child: ChatBotContainerSection(
-                chatCubit: chatCubit,
-                currentIndex: currentIndex,
+              child: Flexible(
+                child: ChatBotContainerSection(
+                  chatCubit: chatCubit,
+                  currentIndex: currentIndex,
+                ),
               )),
           SizedBox(
             height: 35.h,

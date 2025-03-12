@@ -16,9 +16,9 @@ class ChatBotContainerSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
+      padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 250.w),
+        constraints: BoxConstraints(maxWidth: 300.w, maxHeight: 600.h),
         child: IntrinsicHeight(
           child: Container(
             decoration: BoxDecoration(boxShadow: [
@@ -33,7 +33,7 @@ class ChatBotContainerSection extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Text(
                   softWrap: true,
-                  maxLines: 5,
+                  maxLines: 20,
                   chatCubit.chatMessages[currentIndex],
                   style:
                       AppTextStyle.poppins40014.copyWith(color: Colors.black),

@@ -15,8 +15,12 @@ class DiseaseInfoModel {
   final String alternativeTreatments;
   final String references;
   final String image;
+  final String lifestyle;
+  final String doctorSpecialization;
 
   DiseaseInfoModel({
+    required this.lifestyle,
+    required this.doctorSpecialization,
     required this.disease,
     required this.description,
     required this.diet,
@@ -34,6 +38,26 @@ class DiseaseInfoModel {
     required this.references,
     required this.image,
   });
-
-  
+  factory DiseaseInfoModel.empty() {
+    return DiseaseInfoModel(
+      lifestyle: '',
+      doctorSpecialization: '',
+      disease: '',
+      description: '',
+      diet: '',
+      medication: '',
+      causes: '',
+      symptoms: '',
+      prevention: '',
+      diagnosis: '',
+      complications: '',
+      treatmentDuration: '',
+      advice: '',
+      homeRemedies: '',
+      atRiskGroups: '',
+      alternativeTreatments: '',
+      references: '',
+      image: '',
+    );
+  }
 }

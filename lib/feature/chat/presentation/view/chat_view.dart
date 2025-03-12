@@ -29,23 +29,21 @@ class ChatView extends StatelessWidget {
                   child: chatBotAppBar(),
                 ),
                 Expanded(
-                  child: SizedBox(
-                    child: BlocBuilder<ChatCubit, ChatState>(
-                      builder: (context, state) {
-                        return ListView.builder(
-                            itemCount: cubit.chatMessages.length >=
-                                    cubit.userMessage.length
-                                ? cubit.chatMessages.length
-                                : cubit.userMessage.length,
-                            physics: const BouncingScrollPhysics(),
-                            itemBuilder: (context, index) {
-                              return ChatBotBody(
-                                chatCubit: cubit,
-                                currentIndex: index,
-                              );
-                            });
-                      },
-                    ),
+                  child: BlocBuilder<ChatCubit, ChatState>(
+                    builder: (context, state) {
+                      return ListView.builder(
+                          itemCount: cubit.chatMessages.length >=
+                                  cubit.userMessage.length
+                              ? cubit.chatMessages.length
+                              : cubit.userMessage.length,
+                          physics: const BouncingScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return ChatBotBody(
+                              chatCubit: cubit,
+                              currentIndex: index,
+                            );
+                          });
+                    },
                   ),
                 ),
                 Padding(
